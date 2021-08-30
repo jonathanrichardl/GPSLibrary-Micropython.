@@ -16,7 +16,7 @@ class GPS:
         else:
             return False
 
-    def readData(self):
+    def read_data(self):
         while(self.uart.any()>0):
             sentence = self.uart.readline()
             if(sentence.startswith(b"$GNGGA", 0, 7)):
